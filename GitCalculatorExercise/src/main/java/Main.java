@@ -9,7 +9,12 @@ public class Main {
 
         Calculator calc = new Calculator() {
             public int getMaximum() {
-               return 0;
+                int max = 0;
+                for (int value : list) {
+                    if (max < value)
+                        max = value;
+                }
+                return max;
             }
 
             public int getMinimum() {
@@ -25,6 +30,7 @@ public class Main {
             public void addValue(int value) {
                 list.add(value);
             }
+
         };
 
         calc.addValue(20);    // currently highest number
@@ -40,6 +46,7 @@ public class Main {
         System.out.println("lowest number: " + calc.getMinimum());
 
         // output highest number
+        System.out.println("highest number: " + calc.getMaximum());
 
         // output sum of all numbers
     }
