@@ -13,7 +13,13 @@ public class Main {
             }
 
             public int getMinimum() {
-                return 0;
+                int min = list.get(0);
+                for (int value : list) {
+                    if (min > value)
+                        min = value;
+                }
+
+                return min;
             }
 
             public void addValue(int value) {
@@ -26,8 +32,12 @@ public class Main {
         calc.addValue(16);
 
         // add other integers
+        calc.addValue(2);
+        calc.addValue(5);
+        calc.addValue(160);
 
         // output lowest number
+        System.out.println("lowest number: " + calc.getMinimum());
 
         // output highest number
 
