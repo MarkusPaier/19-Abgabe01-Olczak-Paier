@@ -31,6 +31,12 @@ public class Main {
                 list.add(value);
             }
 
+            public int sum() {
+                int result = 0;
+                for (int value : list) {
+                    result += value;
+                }
+                return result;}
         };
 
         calc.addValue(20);    // currently highest number
@@ -49,5 +55,6 @@ public class Main {
         System.out.println("highest number: " + calc.getMaximum());
 
         // output sum of all numbers
+        System.out.print("sum of all numbers: " + calc.sum());
     }
 }
