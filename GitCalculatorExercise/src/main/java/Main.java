@@ -1,46 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        final List<Integer> list = new ArrayList<Integer>();
+        Calculator calc = new CalculatorImpl();
 
-        Calculator calc = new Calculator() {
-            public int getMaximum() {
-                int max = 0;
-                for (int value : list) {
-                    if (max < value)
-                        max = value;
-                }
-                return max;
-            }
-
-            public int getMinimum() {
-                int min = list.get(0);
-                for (int value : list) {
-                    if (min > value)
-                        min = value;
-                }
-
-                return min;
-            }
-
-            public void addValue(int value) {
-                list.add(value);
-            }
-
-            public int sum() {
-                int result = 0;
-                for (int value : list) {
-                    result += value;
-                }
-                return result;}
-        };
-
-        calc.addValue(20);    // currently highest number
-        calc.addValue(4);     // currently lowester number
+        calc.addValue(20);
+        calc.addValue(4);
         calc.addValue(16);
 
         // add other integers
