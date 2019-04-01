@@ -13,6 +13,13 @@ public class Main {
         calc.addValue(5);
         calc.addValue(160);
 
+
+        // more test data:
+        calc.addValue(33);
+        calc.addValue(777);
+        calc.addValue(-1);
+        calc.addValue(7);
+
         // output lowest number
         System.out.println("lowest number: " + calc.getMinimum());
 
